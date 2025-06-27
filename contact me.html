@@ -1,0 +1,64 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Contact | Muhammad Tayyab Patel</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <header>
+    <h1>Contact Me</h1>
+    <nav>
+    <div class="dark-mode-toggle">
+  <label class="switch">
+    <input type="checkbox" id="modeToggle">
+    <span class="slider round"></span>
+  </label>
+  <span class="toggle-text">Dark Mode</span>
+</div>
+      <a href="index.html">Home</a>
+      <a href="about me.html">About</a>
+      <a href="contact me.html">Contact</a>
+    </nav>
+  </header>
+
+  <section class="contact-section">
+    <h2>Get in Touch</h2>
+    <p><strong>Email:</strong> <a href="mailto:muhammadtayyabpatel@gmail.com">muhammadtayyabpatel@gmail.com</a></p>
+    <p><strong>GitHub:</strong> <a href="https://github.com/muhammadtayyabpatel1" target="_blank">Visit My GitHub</a></p>
+    <p><strong>Address:</strong> Lusaka, Zambia</p>
+    <p><strong>Contact:</strong> +260 773 043 004 | +260 950 778 686</p>
+    <p><strong>Working Hours:</strong> Monday – Friday, 9:00 AM to 5:00 PM</p>
+    
+    <!-- WhatsApp Button -->
+    <a class="whatsapp-button" href="https://wa.me/message/UVTY2N73QGCDK1" target="_blank">
+      Message Me on WhatsApp
+    </a>
+  </section>
+<!-- Floating WhatsApp Icon -->
+<a href="https://wa.me/message/UVTY2N73QGCDK1" class="floating-whatsapp" target="_blank" aria-label="Chat on WhatsApp">
+  <img src="https://img.icons8.com/ios-filled/50/25D366/whatsapp.png" alt="WhatsApp Chat">
+</a>
+<script>
+  const toggle = document.getElementById("modeToggle");
+  const body = document.body;
+
+  // Check for saved preference
+  if (localStorage.getItem("dark-mode") === "enabled") {
+    body.classList.add("dark");
+    toggle.checked = true;
+  }
+
+  toggle.addEventListener("change", () => {
+    body.classList.toggle("dark");
+    if (body.classList.contains("dark")) {
+      localStorage.setItem("dark-mode", "enabled");
+    } else {
+      localStorage.setItem("dark-mode", "disabled");
+    }
+  });
+</script>
+</body>
+</html>
